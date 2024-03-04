@@ -1,0 +1,16 @@
+{
+    "name": "acf/news",
+    "title": "News",
+    "description": "A custom about block that uses ACF fields.",
+    "style": [ "file:./news.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["news"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "news.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

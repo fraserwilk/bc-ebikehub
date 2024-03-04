@@ -102,8 +102,9 @@ function goodfleets_register_acf_blocks() {
      * @link https://developer.wordpress.org/reference/functions/register_block_type/
      */
     register_block_type( __DIR__ . '/blocks/about' );
+	register_block_type( __DIR__ . '/blocks/news' );
 }
-// Here we call our tt3child_register_acf_block() function on init.
+// Here we call our goodfleets_register_acf_block() function on init.
 add_action( 'init', 'goodfleets_register_acf_blocks' );
 
 
