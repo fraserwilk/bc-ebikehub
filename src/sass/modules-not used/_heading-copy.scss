@@ -1,0 +1,43 @@
+.module {
+	&__heading-copy {
+		background: $secondary;
+
+		.section-faqs &,
+		.section-policies &,
+		.section-studio & {
+			padding-block: rem(155);
+		}
+
+		.copy-container {
+			margin-top: 35px;
+			max-width : 930px;
+
+			@include media-breakpoint-down(lg) {
+				max-width: 75%;
+			}
+
+			@include media-breakpoint-down(sm) {
+				max-width: 100%;
+			}
+
+			h6 {
+				margin-bottom: 33px;
+				line-height  : 30px;
+			}
+
+			p {
+				@include fonts($typography-h5-font);
+				margin-bottom: 15px;
+				font-size    : fontsize(16);
+				line-height  : lineheight(22, 16);
+				font-family  : 'Montserrat-Regular';
+				font-weight  : 400;
+				color        : $gray-900;
+
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+	}
+}

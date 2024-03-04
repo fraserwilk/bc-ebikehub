@@ -1,0 +1,29 @@
+.navbar {
+  transition: all 0.5s;
+  top:32px;
+}
+.navbar-scrolled {
+  background-color: $primary;
+  box-shadow: 0 3px 10px (rgba(0,0,0, 0.15));
+}
+
+.wp-block-cover {
+    align-items: flex-end;
+}
+
+.wp-block-cover .wp-block-cover__inner-container {
+    width: 85%;
+}
+
+.pt-mega {
+    padding-top: 100px;
+}
+
+
+.typography h1 {
+  font-family:  var(--bs-body-font-family);
+}
+
+.btn {
+  border-radius: 35px;
+}

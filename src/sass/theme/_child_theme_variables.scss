@@ -1,0 +1,61 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
+
+
+$goodfleet-grey: rgb(51,51,51); 
+$goodfleet-yellow: rgb(252,241,193);
+$goodfleet-highlight: rgb(247,199,0);
+
+$spacer: 1rem;
+$border-radius: 35px;
+
+
+// scss-docs-start theme-color-variables
+$primary:       $goodfleet-grey;
+$secondary:     $goodfleet-yellow;
+$highlight:     $goodfleet-highlight;
+// scss-docs-end theme-color-variables
+
+
+// Define font variables
+$font-family-base: 'Montserrat', sans-serif;
+$headings-font-family: 'Montserrat', sans-serif;
+
+// Define mixin for Montserrat font
+@mixin montserrat($weight: 400) {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+}
+
+// Apply mixin to generate Montserrat classes
+
+@mixin montserrat-class($uniquifier, $weight: 400) {
+  .montserrat-#{$uniquifier} {
+    @include montserrat($weight);
+  }
+}
+
+// Example usage of Montserrat class mixin
+@include montserrat-class(regular);
+@include montserrat-class(medium, 500);
+@include montserrat-class(semibold, 600);
+@include montserrat-class(bold, 700);
+
+
+#wrapper-footer {
+  background-color: $primary;
+  color: white;
+}
+
+#wrapper-footer a {
+  color: white;
+}
+  
+#wrapper-footer a:hover {
+  color: $secondary;
+}
+
+
