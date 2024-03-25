@@ -174,7 +174,7 @@
                     "label": "Icon",
                     "name": "icon",
                     "aria-label": "",
-                    "type": "file",
+                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -185,12 +185,42 @@
                     },
                     "return_format": "array",
                     "library": "all",
+                    "min_width": "",
+                    "min_height": "",
                     "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
                     "max_size": "",
                     "mime_types": "",
+                    "preview_size": "medium",
                     "parent_repeater": "field_65e5a2cc5ac5c"
                 }
             ]
+        },
+        {
+            "key": "field_65e7f1a7db92a",
+            "label": "Category",
+            "name": "category",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "field_type": "select",
+            "allow_null": 0,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -211,5 +241,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709549880
+    "modified": 1709704634
 }

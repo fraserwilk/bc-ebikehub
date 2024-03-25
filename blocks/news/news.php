@@ -16,7 +16,7 @@ $news_background_color = get_field('news_background_color'); // ACF's color pick
 
 
 // Create class attribute allowing for custom "className" and "align" values.
-$class_name = 'about';
+$class_name = 'news';
 if (!empty($block['className'])) {
     $class_name .= ' ' . $block['className'];
 }
@@ -38,50 +38,111 @@ if ($news_background_color) {
 $style = implode('; ', $styles);
 ?>
 
-<div class="<?php echo esc_attr($class_name); ?> px-4" style="<?php echo esc_attr($style); ?>">
-    <div class="pt-mega container">
-        <div class=""><?php echo esc_html($news_sub_title); ?></div>
-        <h2 class="border-title"><?php echo esc_html($news_title); ?></h2>
-        <div class="col copy-container py-5">
-            <div class="fs-5 mb-4">
-                <?php if (!empty($news_intro)) : ?>
-                    <?php echo wp_kses_post($news_intro); ?>
-                <?php endif; ?>
-            </div>
 
+
+<div class="<?php echo esc_attr($class_name); ?>" style="<?php echo esc_attr($style); ?>">
+    <div class="pt-mega container">
+        <div class="row align-items-md-stretch">
+            <div class="col-md-6">
+                    <div class="news-sub-title"><?php echo esc_html($news_sub_title); ?></div>
+                    <h2 class="news-title"><?php echo esc_html($news_title); ?></h2>
+                    <div class="news-intro">
+                        <?php if (!empty($news_intro)) : ?>
+                            <?php echo wp_kses_post($news_intro); ?>
+                        <?php endif; ?>
+                    </div>
+
+                    <?php
+                        $term = get_field('category'); // From ACF
+                        
+                        if ($term) {
+                            $term_name = isset($term->name) ? $term->name : '';
+                        }
+                    
+                        
+                        // Check rows exists.
+                        if( have_rows('news_articles') ) {
+
+                            // Open the row container.
+                            echo '<div class="row align-items-md-stretch">';
+                            
+                            // Retrieve selected category from ACF custom field
+                                $selected_category = get_field('category'); // The name of the ACF field
+
+                                // Check if a category was selected
+                                if ($selected_category) {
+                                    // Get the term_id of the selected category
+                                    $category_id = $selected_category->term_id;
+
+                                    // Query posts based on selected category
+                                    $args = array(
+                                        'post_type' => 'post',
+                                        'posts_per_page'    => 6,
+                                        'order' => 'ASC',
+                                        'cat' => $category_id, // Use the term_id of the selected category
+                                    );
+
+                                    $the_query = new WP_Query($args);
+
+                                    // The Loop
+                                    if ($the_query->have_posts()) {
+                                        while ($the_query->have_posts()) {
+                                            $the_query->the_post();
+                                            // Display the post content as desired
+                                            echo '<div class="col-md-6">';
+                                            echo '<div class="news-article-icon">';
+                                                // Display the post thumbnail
+                                                if (has_post_thumbnail()) {
+                                                    the_post_thumbnail('thumbnail');
+                                                }
+                                            echo '</div>';
+                                            echo '<h3 class="news-article-heading"><a href="' . esc_url(get_permalink()) . '">' . get_the_title() . '</a></h3>';
+                                            // Display the post content
+                                            the_content();
+                                            echo '</div>';
+                                        }
+                                    }
+                                    else {
+                                        // No posts found
+                                        echo 'No posts found';
+                                    }
+
+                                    // Restore original post data
+                                    wp_reset_postdata();
+                                } else {
+                                    // No category selected
+                                    echo 'No category selected';
+                                }
+
+
+                            // Close the row container.
+                            echo '</div>';
+
+                        }
+
+
+                ?>
+                
+            </div>
             
+        <div class="col-md-6">
+            <div class="h-100 p-5 bg-body-tertiary">
+                <?php if ($news_image) : ?>
+                    <div class="news-image">
+                    <?php 
+                        $size = 'large'; // (thumbnail, medium, large, full or custom size)
+                        if( $news_image ) {
+                            echo wp_get_attachment_image( $news_image, $size );
+                        }
+                        ?>
+                    </div>
+                <?php endif; ?>
+                
+            </div>
         </div>
     </div>
 
-    <?php if ($news_image) : ?>
-        <div class="col-md-3">
-        <?php 
-            $size = 'large'; // (thumbnail, medium, large, full or custom size)
-            if( $news_image ) {
-                echo wp_get_attachment_image( $news_image, $size );
-            }
-            ?>
-        </div>
-    <?php endif; ?>
 
-    <?php
-
-// Check rows exists.
-if( have_rows('news_articles') ):
-
-    // Loop through rows.
-    while( have_rows('news_articles') ) : the_row();
-
-        // Load sub field value.
-        $sub_value = get_sub_field('heading');
-        // Do something, but make sure you escape the value if outputting directly...
-        echo esc_html( $sub_value );
-    // End loop.
-    endwhile;
-
-// No value.
-else :
-    // Do something...
-endif;
-?>
+    </div>
 </div>
+

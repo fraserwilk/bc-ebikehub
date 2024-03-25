@@ -19,8 +19,8 @@ defined( 'ABSPATH' ) || exit;
 
 	echo get_the_post_thumbnail( $post->ID, 'large' );
 	?>
+<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 
 	<div class="entry-content">
@@ -38,4 +38,4 @@ defined( 'ABSPATH' ) || exit;
 
 	</footer><!-- .entry-footer -->
 
-</div><!-- #post-<?php the_ID(); ?> -->
+</article><!-- #post-<?php the_ID(); ?> -->

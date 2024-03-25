@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Hub Frontpage
+ * Template Name: Hub Frontpage test
  *
  * Template for displaying a page without sidebar even if a sidebar widget is published.
  *
@@ -25,7 +25,7 @@ if ( is_page_template( 'page-templates/no-title.php' ) ) {
 
 <div class="wrapper pt-mega" id="<?php echo $wrapper_id; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- ok. ?>">
 
-	<div class="<?php echo esc_attr( $container ); ?>-fluid px-0" id="content">
+	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 
 		<div class="row">
 

@@ -12,16 +12,16 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<nav id="main-nav" class="navbar navbar-expand-md navbar-dark fixed-top" aria-labelledby="main-nav-label">
+<nav id="main-nav" class="navbar navbar-expand-md navbar-dark fixed-top bg-primary" aria-labelledby="main-nav-label">
 
 	<h2 id="main-nav-label" class="screen-reader-text">
 		<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
 	</h2>
 
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+	<div class="container">
 
-		<!-- Your site branding in the menu -->
+		<!-- Our branding in the menu -->
 		<?php get_template_part( 'global-templates/navbar-branding' ); ?>
 
 		<button
@@ -56,6 +56,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </nav><!-- #main-nav -->
 
+<!--  transparent navbar on scroll -->
 <script>
         const navEl = document.querySelector('.navbar');
         window.addEventListener('scroll', () => {

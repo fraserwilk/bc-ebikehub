@@ -2,20 +2,22 @@
 	font-family:'Montserrat-Regular';
 	font-weight:400;
 	font-style:normal;
-	src:url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap') format('truetype');
+	src:url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 }
 @font-face {
 	font-family:'Montserrat-Medium';
 	font-weight:500;
 	font-style:normal;
 	src:url('../fonts/Montserrat-Medium.ttf') format('truetype');
+	src:url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 }
 @font-face {
 	font-family:'Montserrat-SemiBold';
 	font-weight:600;
 	font-style:normal;
-	// src:url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
-	src:url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap') format('truetype');
+	src:url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+	src:url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap') ;
 }
 @font-face {
 	font-family:'Montserrat-Bold';

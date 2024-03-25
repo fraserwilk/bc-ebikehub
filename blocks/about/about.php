@@ -56,50 +56,36 @@ $style = implode('; ', $styles);
                 <?php endif; ?>
             </div>
 
-            <?php if ($button_1_link && $button_1_label) : ?>
+
+
+            <?php if (($button_1_link && $button_1_label) || ($button_2_link && $button_2_label)) : ?>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-start">
-                    <a role="button" href="<?php echo esc_url($button_1_link['url']); ?>" target="<?php echo esc_attr($button_1_link['target'] ?? '_self'); ?>" class="btn btn-warning btn-lg px-4 me-sm-3 fw-bold">
-                        <?php echo esc_html($button_1_label); ?>
-                    </a>
+                    <?php if ($button_1_link && $button_1_label) : ?>
+                        <a role="button" href="<?php echo esc_url($button_1_link['url']); ?>" target="<?php echo esc_attr($button_1_link['target'] ?? '_self'); ?>" class="btn btn-warning btn-lg px-4 me-sm-3 fw-bold">
+                            <?php echo esc_html($button_1_label); ?>
+                        </a>
+                    <?php endif; ?>
+                    <?php if ($button_2_link && $button_2_label) : ?>
+                        <a role="button" href="<?php echo esc_url($button_2_link['url']); ?>" target="<?php echo esc_attr($button_2_link['target'] ?? '_self'); ?>" class="btn btn-outline-dark btn-lg px-4 me-sm-3">
+                            <?php echo esc_html($button_2_label); ?>
+                        </a>
+                    <?php endif; ?>
                 </div>
             <?php endif; ?>
 
-            <?php if ($button_2_link && $button_2_label) : ?>
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-start">
-                    <a role="button" href="<?php echo esc_url($button_2_link['url']); ?>" target="<?php echo esc_attr($button_2_link['target'] ?? '_self'); ?>" class="btn btn-outline-dark btn-lg px-4 me-sm-3">
-                        <?php echo esc_html($button_2_label); ?>
-                    </a>
-                </div>
-            <?php endif; ?>
         </div>
     </div>
 
-    <?php if ($video_link) : ?>
+    <?php if ($video_link) :  ?>
         <div class="col-md-8 offset-md-2">
-        <div class="ratio ratio-16x9">
-            <div id="player"></div>
-        </div>
+            <div>
+                <div id="player">
+                    <iframe width="480" height="848" src="<?php echo esc_url( $video_link ); ?>" title="Kola Introduction and Features" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+            </div>
 
-        <script>
-            // Load YouTube IFrame Player API asynchronously
-            var tag = document.createElement('script');
-            tag.src = 'https://www.youtube.com/iframe_api';
-            var firstScriptTag = document.getElementsByTagName('script')[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-            // Function called when API is ready
-            function onYouTubeIframeAPIReady() {
-                // Create YouTube player
-                var player = new YT.Player('player', {
-                    height: '360',
-                    width: '640',
-                    videoId: '<?php echo $video_link; ?>',
-                    playerVars: {
-                        // Add any additional player parameters here
-                    }
-                });
-            }
-        </script>
+        
         </div>
     <?php endif; ?>
+  
 </div>

@@ -94,7 +94,7 @@ function understrap_child_customize_controls_js() {
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
 
 
-function goodfleets_register_acf_blocks() {
+function ebikehub_register_acf_blocks() {
     /**
      * We register our block's with WordPress's handy
      * register_block_type();
@@ -105,7 +105,7 @@ function goodfleets_register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/news' );
 }
 // Here we call our goodfleets_register_acf_block() function on init.
-add_action( 'init', 'goodfleets_register_acf_blocks' );
+add_action( 'init', 'ebikehub_register_acf_blocks' );
 
 
 
@@ -162,3 +162,4 @@ add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mime
   add_action( 'admin_head', 'fix_svg' );
 
   // <!--- Allow SVG
+

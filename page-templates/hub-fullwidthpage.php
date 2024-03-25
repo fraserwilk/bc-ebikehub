@@ -23,7 +23,7 @@ if ( is_page_template( 'page-templates/no-title.php' ) ) {
 }
 ?>
 
-<div class="wrapper" id="<?php echo $wrapper_id; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- ok. ?>">
+<div class="wrapper pt-mega" id="<?php echo $wrapper_id; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- ok. ?>">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 
@@ -31,17 +31,11 @@ if ( is_page_template( 'page-templates/no-title.php' ) ) {
 
 			<div class="col-md-12 content-area" id="primary">
 
-				<main class="site-main" id="main" role="main">
-
 					<?php
 					while ( have_posts() ) {
 						the_post();
 						get_template_part( 'loop-templates/content', 'page' );
 
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) {
-							comments_template();
-						}
 					}
 					?>
 
