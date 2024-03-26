@@ -163,6 +163,7 @@ add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mime
 
   // <!--- Allow SVG
 
+
 // <--- WordPress Login Logo and URL
 function wpb_login_logo() { ?>
 	<style type="text/css">

@@ -274,7 +274,7 @@ body.admin-bar .fixed-top {
   } */
 }
 .site-header__nav ul li a {
-  /* color      : $clr-white; */
+  color: #FFF;
   position: relative;
   /* @include media-breakpoint-down(md) {
       font-size  : 35px;
@@ -310,7 +310,7 @@ body.admin-bar .fixed-top {
   } */
 }
 .site-header__nav ul li a.active, .site-header__nav ul li a[aria-current=page] {
-  color: rgb(51, 51, 51);
+  color: rgb(252, 241, 193);
   /* @include media-breakpoint-down(md) {
          color: $clr-grey;
   } */

@@ -131,7 +131,7 @@
                 } */
 
                 a {
-                    /* color      : $clr-white; */
+                    color      : $clr-white;
                     position   : relative;
                     // font-family: $font-montserrat-semibold;
 
@@ -177,7 +177,7 @@
 
                     &.active,
                     &[aria-current="page"] {
-                        color: $primary;
+                        color: $secondary;
                         /* @include media-breakpoint-down(md) {
                                color: $clr-grey;
                         } */
