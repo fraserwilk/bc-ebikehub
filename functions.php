@@ -163,3 +163,34 @@ add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mime
 
   // <!--- Allow SVG
 
+// <--- WordPress Login Logo and URL
+function wpb_login_logo() { ?>
+	<style type="text/css">
+		#login h1 a, .login h1 a {
+			background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2024/03/buildingcommunities-short-logo.png);
+		height:200px;
+		width:300px;
+		background-size: 200px 200px;
+		background-repeat: no-repeat;
+		padding-bottom: 10px;
+		}
+	</style>
+<?php }
+add_action( 'login_enqueue_scripts', 'wpb_login_logo' );
+
+// change the logo link
+	
+	function wpb_login_logo_url() {
+	    return home_url();
+	}
+	add_filter( 'login_headerurl', 'wpb_login_logo_url' );
+	 
+	function wpb_login_logo_url_title() {
+		$tagline = get_bloginfo('description'); 
+	    return $tagline;
+	}
+	add_filter( 'login_headertitle', 'wpb_login_logo_url_title' );
+
+// <!--- WordPress Login Logo and URL
+
+
