@@ -162,7 +162,7 @@ body.admin-bar .fixed-top {
   width: 100%;
   z-index: 99;
   padding-block: rem(30);
-  background: transparent;
+  background: #F7C700;
   transition: all 0.5s ease-in-out;
 }
 .section-faqs .site-header, .single-property .site-header, .section-contact-us .site-header, .section-policies .site-header, .search .site-header {
@@ -304,6 +304,7 @@ body.admin-bar .fixed-top {
   bottom: -1px;
   height: 3px;
   width: 0%;
+  background: #F7C700;
   transition: all 0.3s linear;
   /* @include media-breakpoint-down(md) { 
       background: $clr-grey;
