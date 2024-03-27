@@ -1,0 +1,87 @@
+// Styling for the navigation bar
+#main-nav.navbar {
+    text-align: right;
+    padding: 30px 0;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-left: 0;
+    }
+
+    li {
+        padding: 0 1rem;
+        margin: 0;
+    }
+
+    // Style for anchor tags within the navigation bar
+    a {
+        color: $light;
+        position: relative;
+        transition: all .3s ease;
+
+        &:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 8px;
+            height: 3px;
+            width: 0%;
+            background: $ebike-highlight;
+            transition: all .3s linear;
+        }
+        
+        // Apply hover effect on anchor tags
+        &:hover:after {
+            width: 100%;
+        }
+    }
+
+    // Style for active anchor tags
+    a.active,
+    a[aria-current=page] {
+        color: $ebike-highlight;
+        &:after {
+            width: 100%;
+        }
+    }
+}
+
+// Styling for the navbar when scrolled
+.navbar-scrolled {
+    background-color: $primary;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    li a {
+        color: $light;
+    }
+}
+
+// Customize the appearance of the navbar
+.navbar-dark {
+    // Customization for dark navbar
+    // (Add your customizations here)
+}
+
+
+
+
+// Scroll animations
+.scroll-watcher {
+    height: 3px;
+    position: fixed;
+    top: 60px;
+    z-index: 1000;
+    background-color: $ebike-yellow;
+    width: 100%;
+    scale: 0 1;
+    transform-origin: left;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+}
+@keyframes scroll-watcher {
+    to {scale: 1 1; }
+}
+
+// Scroll animations - end

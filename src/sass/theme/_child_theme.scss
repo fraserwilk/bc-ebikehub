@@ -10,57 +10,19 @@ body {
     font-style: normal;
 }
 
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+a:hover {
+  background-size: 4px 50px;
+}
+
 .wrapper {
   padding: 0;
 }
 
-.navbar {
-  // background-color: transparent;
-  transition: all 0.5s;
-}
-
-.navbar-scrolled {
-  background-color: $primary;
-  box-shadow: 0 3px 10px (rgba(0,0,0, 0.15));
-
-    li a {
-    color: $light;
-    }
-}
-
-.navbar-dark {
-  --bs-navbar-color: rgba(255, 255, 255, 0.8);
-  --bs-navbar-hover-color: rgba(255, 255, 255, 1);
-  --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
-  --bs-navbar-active-color: #fff;
-  --bs-navbar-brand-color: #fff;
-  --bs-navbar-brand-hover-color: #fff;
-  --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
-  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-.nav-link {
-  font-size: 1.2rem;
-  color: $light;
-}
-
-// Scroll animations
-.scroll-watcher {
-  height: 3px;
-  position: fixed;
-  top: 56px;
-  z-index: 1000;
-  background-color: $ebike-yellow;
-  width: 100%;
-  scale: 0 1;
-  transform-origin: left;
-  animation: scroll-watcher linear;
-  animation-timeline: scroll();
-}
-@keyframes scroll-watcher {
-  to {scale: 1 1; }
-}
-// Scroll animations - end
 
 .wp-block-cover {
     align-items: flex-end;

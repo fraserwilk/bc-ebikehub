@@ -11105,56 +11105,19 @@ body {
   font-style: normal;
 }
 
+a {
+  color: rgb(51, 51, 51);
+  text-decoration: none;
+}
+
+a:hover {
+  background-size: 4px 50px;
+}
+
 .wrapper {
   padding: 0;
 }
 
-.navbar {
-  transition: all 0.5s;
-}
-
-.navbar-scrolled {
-  background-color: rgb(51, 51, 51);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-}
-.navbar-scrolled li a {
-  color: #f8f9fa;
-}
-
-.navbar-dark {
-  --bs-navbar-color: rgba(255, 255, 255, 0.8);
-  --bs-navbar-hover-color: rgba(255, 255, 255, 1);
-  --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
-  --bs-navbar-active-color: #fff;
-  --bs-navbar-brand-color: #fff;
-  --bs-navbar-brand-hover-color: #fff;
-  --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
-  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-.nav-link {
-  font-size: 1.2rem;
-  color: #f8f9fa;
-}
-
-.scroll-watcher {
-  height: 3px;
-  position: fixed;
-  top: 56px;
-  z-index: 1000;
-  background-color: rgb(252, 241, 193);
-  width: 100%;
-  scale: 0 1;
-  transform-origin: left;
-  animation: scroll-watcher linear;
-  animation-timeline: scroll();
-}
-
-@keyframes scroll-watcher {
-  to {
-    scale: 1 1;
-  }
-}
 .wp-block-cover {
   align-items: flex-end;
 }
@@ -11607,6 +11570,75 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
 }
 .wp-block-buttons .wp-block-button:not(.is-style-outline) .wp-block-button__link {
   border: 1px solid transparent;
+}
+
+#main-nav.navbar {
+  text-align: right;
+  padding: 30px 0;
+}
+#main-nav.navbar ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-left: 0;
+}
+#main-nav.navbar li {
+  padding: 0 1rem;
+  margin: 0;
+}
+#main-nav.navbar a {
+  color: #f8f9fa;
+  position: relative;
+  transition: all 0.3s ease;
+}
+#main-nav.navbar a:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 8px;
+  height: 3px;
+  width: 0%;
+  background: rgb(247, 199, 0);
+  transition: all 0.3s linear;
+}
+#main-nav.navbar a:hover:after {
+  width: 100%;
+}
+#main-nav.navbar a.active,
+#main-nav.navbar a[aria-current=page] {
+  color: rgb(247, 199, 0);
+}
+#main-nav.navbar a.active:after,
+#main-nav.navbar a[aria-current=page]:after {
+  width: 100%;
+}
+
+.navbar-scrolled {
+  background-color: rgb(51, 51, 51);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+.navbar-scrolled li a {
+  color: #f8f9fa;
+}
+
+.scroll-watcher {
+  height: 3px;
+  position: fixed;
+  top: 60px;
+  z-index: 1000;
+  background-color: rgb(252, 241, 193);
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
 }
 
 /*# sourceMappingURL=child-theme.css.map */
