@@ -40,6 +40,11 @@
   color: rgb(252, 241, 193);
 }
 
+.wrapper.ebike-single {
+  padding-top: 200px;
+  background-color: rgb(223, 226, 215);
+}
+
 *,
 *::before,
 *::after {

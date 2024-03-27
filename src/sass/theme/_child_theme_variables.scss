@@ -3,9 +3,10 @@
 // Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
 
 
-$goodfleet-grey: rgb(51,51,51); 
-$goodfleet-yellow: rgb(252,241,193);
-$goodfleet-highlight: rgb(247,199,0);
+$ebike-grey: rgb(51,51,51); 
+$ebike-yellow: rgb(252,241,193);
+$ebike-highlight: rgb(247,199,0);
+$ebike-olive: #DFE2D7;
 $clr-white: #FFF;
 
 // scss-docs-start gray-color-variables
@@ -27,9 +28,10 @@ $border-radius: 35px;
 
 
 // scss-docs-start theme-color-variables
-$primary:       $goodfleet-grey;
-$secondary:     $goodfleet-yellow;
-$highlight:     $goodfleet-highlight;
+$primary:       $ebike-grey;
+$secondary:     $ebike-yellow;
+$highlight:     $ebike-highlight;
+$olive: $ebike-olive;
 // scss-docs-end theme-color-variables
 
 
@@ -73,3 +75,9 @@ $headings-font-family: 'Montserrat', sans-serif;
   color: $secondary;
 }
 
+// Single post styling
+
+.wrapper.ebike-single {
+  padding-top: 200px;
+  background-color:rgb(223, 226, 215);
+}

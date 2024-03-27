@@ -11117,6 +11117,11 @@ a.skip-link:not(:focus):not(:focus-within) {
   color: rgb(252, 241, 193);
 }
 
+.wrapper.ebike-single {
+  padding-top: 200px;
+  background-color: rgb(223, 226, 215);
+}
+
 body.admin-bar .fixed-top {
   top: 28px;
 }
@@ -11146,6 +11151,10 @@ body.admin-bar .fixed-top {
   --bs-navbar-brand-hover-color: #fff;
   --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-link {
+  font-size: 1.2rem;
 }
 
 .scroll-watcher {
