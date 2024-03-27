@@ -1,27 +1,21 @@
-@font-face {
-	font-family:'Montserrat-Regular';
-	font-weight:400;
-	font-style:normal;
-	src:url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-}
+/* 
+  Replace <uniquifier> with a unique and descriptive class name
+  Replace <weight> with a value from 100 to 900
+*/
+
 @font-face {
-	font-family:'Montserrat-Medium';
-	font-weight:500;
-	font-style:normal;
-	src:url('../fonts/Montserrat-Medium.ttf') format('truetype');
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 100 400 600 900;
+	font-display: swap;
 	src:url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-}
-@font-face {
-	font-family:'Montserrat-SemiBold';
-	font-weight:600;
-	font-style:normal;
-	src:url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
-	src:url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap') ;
-}
-@font-face {
-	font-family:'Montserrat-Bold';
-	font-weight:700;
-	font-style:normal;
-	src:url('../fonts/Montserrat-Bold.ttf') format('truetype');
-}
+  }
+  
+  .montserrat-semibold {
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+  }
+  

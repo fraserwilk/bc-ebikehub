@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<nav id="main-nav" class="site-header__nav navbar navbar-expand-md navbar-dark fixed-top" aria-labelledby="main-nav-label">
+<nav id="main-nav" class="navbar navbar-expand-md navbar-dark fixed-top" aria-labelledby="main-nav-label">
 
 	<h2 id="main-nav-label" class="screen-reader-text">
 		<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
@@ -21,7 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div class="container">
 
-		<!-- Our branding in the menu -->
+		<!-- eBike branding in the menu -->
 		<?php get_template_part( 'global-templates/navbar-branding' ); ?>
 
 		<button
@@ -41,7 +41,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		wp_nav_menu(
 			array(
 				'theme_location'  => 'primary',
-				'container_class' => 'collapse navbar-collapse',
+				'container_class' => 'collapse navbar-collapse text-end',
 				'container_id'    => 'navbarNavDropdown',
 				'menu_class'      => 'navbar-nav ms-auto',
 				'fallback_cb'     => '',

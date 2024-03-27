@@ -31,35 +31,12 @@ $border-radius: 35px;
 $primary:       $ebike-grey;
 $secondary:     $ebike-yellow;
 $highlight:     $ebike-highlight;
-$olive: $ebike-olive;
+$olive:         $ebike-olive;
 // scss-docs-end theme-color-variables
-
 
 // Define font variables
 $font-family-base: 'Montserrat', sans-serif;
 $headings-font-family: 'Montserrat', sans-serif;
-
-// Define mixin for Montserrat font
-@mixin montserrat($weight: 400) {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: $weight;
-  font-style: normal;
-}
-
-// Apply mixin to generate Montserrat classes
-
-@mixin montserrat-class($uniquifier, $weight: 400) {
-  .montserrat-#{$uniquifier} {
-    @include montserrat($weight);
-  }
-}
-
-// Example usage of Montserrat class mixin
-@include montserrat-class(regular);
-@include montserrat-class(medium, 500);
-@include montserrat-class(semibold, 600);
-@include montserrat-class(bold, 700);
 
 
 #wrapper-footer {

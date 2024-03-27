@@ -3,27 +3,29 @@ body.admin-bar .fixed-top {
   top: 28px; // set “px” value According to your project
 }
 
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .wrapper {
   padding: 0;
 }
 
 .navbar {
-  background-color: transparent;
+  // background-color: transparent;
   transition: all 0.5s;
-  // top:32px;
-
-  li a {
-    // color: $primary;
-  }
 }
 
 .navbar-scrolled {
   background-color: $primary;
   box-shadow: 0 3px 10px (rgba(0,0,0, 0.15));
 
-  li a {
-  color: #f5f5f5;
-  }
+    li a {
+    color: $light;
+    }
 }
 
 .navbar-dark {
@@ -38,7 +40,8 @@ body.admin-bar .fixed-top {
 }
 
 .nav-link {
-  font-size: 1.2rem;;
+  font-size: 1.2rem;
+  color: $light;
 }
 
 // Scroll animations
@@ -73,17 +76,6 @@ body.admin-bar .fixed-top {
 
 .pb-mega {
   padding-bottom: 100px;
-}
-
-
-.typography h1 {
-  font-family:  var(--bs-body-font-family);
-  
-}
-
-.typography h2 {
-  font-family:  var(--bs-body-font-family);
-  font-variation-settings: 'wght' 700;
 }
 
 .btn {

@@ -17,7 +17,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	get_template_part( 'global-templates/hero' );
 } */
 
-$wrapper_id = 'fixed-width-page-wrapper';
+$wrapper_id = 'full-width-page-wrapper';
 if ( is_page_template( 'page-templates/no-title.php' ) ) {
 	$wrapper_id = 'no-title-page-wrapper';
 }
@@ -25,7 +25,7 @@ if ( is_page_template( 'page-templates/no-title.php' ) ) {
 
 <div class="wrapper" id="<?php echo $wrapper_id; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- ok. ?>">
 
-	<div class="<?php echo esc_attr( $container ); ?>-fluid px-0" id="content">
+	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 
 		<div class="row">
 
