@@ -34,6 +34,15 @@ $highlight:     $ebike-highlight;
 $olive:         $ebike-olive;
 // scss-docs-end theme-color-variables
 
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "olive":      $olive
+) !default;
+// scss-docs-end theme-colors-map
+
 // Define font variables
 $font-family-base: 'Montserrat', sans-serif;
 $headings-font-family: 'Montserrat', sans-serif;

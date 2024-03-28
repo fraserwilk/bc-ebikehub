@@ -11625,7 +11625,7 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
 .scroll-watcher {
   height: 3px;
   position: fixed;
-  top: 60px;
+  top: 100px;
   z-index: 1000;
   background-color: rgb(252, 241, 193);
   width: 100%;
