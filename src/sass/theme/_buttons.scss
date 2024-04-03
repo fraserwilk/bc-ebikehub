@@ -1,0 +1,105 @@
+// removed in BSv5 so need to refactor from v4
+@mixin hover-focus-active() {
+    &:hover,
+    &:focus,
+    &:active {
+    @content;
+    }
+    }
+    
+    @mixin bmd-hover-focus-active {
+    // add the .active to the whole mix of hover-focus-active
+    &.active {
+      @content;
+    }
+    @include hover-focus-active() {
+      @content;
+    }
+    }
+
+
+.btn {
+	transition  : border 300ms ease, background 300ms ease, color 300ms ease;
+	font-size   : 16px;
+	line-height : 22px;
+	font-family : 'Montserrat';
+	font-weight : 500;
+	box-shadow  : none !important;
+	border-width: 2px;
+	padding     : rem(11) rem(28) !important;
+
+	&-white {
+		background: $white;
+		border    : 1px solid $white;
+		color     : $black;
+
+		@include hover-focus-active {
+			background: $primary;
+			color     : color-contrast($primary);
+		}
+
+		&--hollow {
+			background: transparent;
+			color     : $white;
+
+			@include hover-focus-active {
+				background: $white;
+				color     : $black;
+			}
+		}
+	}
+
+	&-yellow {
+		background     : $ebike-highlight;
+		border-radius  : 35px;
+		color          : $gray-900;
+		border-color   : $ebike-highlight;
+		display        : inline-flex;
+		align-items    : center;
+		justify-content: center;
+
+		@include hover-focus-active {
+			background  : $ebike-yellow;
+			border-color: $primary;
+			box-shadow  : none;
+		}
+
+		&:hover {
+			background  : $ebike-yellow;
+			border-color: $primary;
+		}
+
+	}
+
+	&-grey {
+		background     : transparent;
+		border-color   : $gray-100;
+		color          : $gray-100;
+		padding        : 13px 22px;
+		display        : inline-flex;
+		align-items    : center;
+		justify-content: center;
+		border-radius  : 24px;
+
+		@include hover-focus-active {
+			background  : $gray-100;
+			border-color: $gray-100;
+			color       : $light !important;
+			box-shadow  : none !important;
+		}
+	}
+
+	&-black {
+		background-color: $gray-100;
+		color           : $light;
+		border-radius   : 35px;
+
+		@include hover-focus-active {
+			background  : $light;
+			border-color: $gray-200;
+			color       : $gray-100;
+			box-shadow  : none !important;
+		}
+	}
+}
+

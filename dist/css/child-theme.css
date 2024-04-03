@@ -11584,8 +11584,9 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   padding-left: 0;
 }
 #main-nav.navbar li {
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   margin: 0;
+  text-wrap: nowrap;
 }
 #main-nav.navbar a {
   color: #f8f9fa;
@@ -11614,6 +11615,108 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   width: 100%;
 }
 
+#main-nav .searchform.visible-sm {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  #main-nav .searchform.visible-sm {
+    display: block;
+    position: absolute;
+    right: 85px;
+    top: 50%;
+    transform: translateY(-12px);
+  }
+}
+@media (max-width: 767.98px) {
+  #main-nav .searchform.hidden-sm {
+    display: none;
+  }
+}
+#main-nav .search-box {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  margin-right: rem(0);
+  margin-right: rem(0);
+}
+#main-nav .input-search {
+  height: rem(48);
+  width: rem(24);
+  border-style: none;
+  padding: 0px;
+  font-size: rem(16);
+  letter-spacing: 0.332px;
+  line-height: rem(32);
+  outline: none;
+  border-radius: 0px;
+  transition: all 0.5s ease-in-out;
+  background-color: transparent;
+  padding-right: rem(36);
+  padding-left: rem(28);
+  border-color: trnasparent;
+  font-family: "Montserrat";
+  color: rgb(51, 51, 51);
+}
+#main-nav .input-search::-moz-placeholder {
+  color: white;
+  font-size: rem(16);
+  font-family: "Monserrat";
+  line-height: rem(32);
+}
+#main-nav .input-search::placeholder {
+  color: white;
+  font-size: rem(16);
+  font-family: "Monserrat";
+  line-height: rem(32);
+}
+#main-nav .btn-search {
+  width: rem(34);
+  height: rem(48);
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  color: white;
+  background-color: transparent;
+  padding-left: 10px;
+  pointer-events: painted;
+  border: 0 !important;
+  padding: 0 !important;
+  padding-right: 16px !important;
+}
+#main-nav .btn-search img {
+  width: 18px;
+  height: 18px;
+}
+#main-nav .btn-search:focus ~ .input-search, #main-nav .btn-search:hover ~ .input-search {
+  width: rem(284);
+  border-radius: 0px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 22px;
+  transition: all 500ms linear;
+  width: rem(220);
+}
+@media (max-width: 991.98px) {
+  #main-nav .btn-search:focus ~ .input-search, #main-nav .btn-search:hover ~ .input-search {
+    width: rem(220);
+  }
+}
+#main-nav .input-search:focus, #main-nav .input-search:hover {
+  width: rem(284);
+  border-radius: 22px;
+  background-color: transparent;
+  border: 1px solid white;
+  transition: all 500ms linear;
+  width: rem(220);
+}
+@media (max-width: 991.98px) {
+  #main-nav .input-search:focus, #main-nav .input-search:hover {
+    width: rem(220);
+  }
+}
+
 .navbar-scrolled {
   background-color: rgb(51, 51, 51);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
@@ -11639,6 +11742,78 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   to {
     scale: 1 1;
   }
+}
+.btn {
+  transition: border 300ms ease, background 300ms ease, color 300ms ease;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  box-shadow: none !important;
+  border-width: 2px;
+  padding: rem(11) rem(28) !important;
+}
+.btn-white {
+  background: #fff;
+  border: 1px solid #fff;
+  color: #000;
+}
+.btn-white:hover, .btn-white:focus, .btn-white:active {
+  background: rgb(51, 51, 51);
+  color: #fff;
+}
+.btn-white--hollow {
+  background: transparent;
+  color: #fff;
+}
+.btn-white--hollow:hover, .btn-white--hollow:focus, .btn-white--hollow:active {
+  background: #fff;
+  color: #000;
+}
+.btn-yellow {
+  background: rgb(247, 199, 0);
+  border-radius: 35px;
+  color: #212529;
+  border-color: rgb(247, 199, 0);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-yellow:hover, .btn-yellow:focus, .btn-yellow:active {
+  background: rgb(252, 241, 193);
+  border-color: rgb(51, 51, 51);
+  box-shadow: none;
+}
+.btn-yellow:hover {
+  background: rgb(252, 241, 193);
+  border-color: rgb(51, 51, 51);
+}
+.btn-grey {
+  background: transparent;
+  border-color: #f8f9fa;
+  color: #f8f9fa;
+  padding: 13px 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+}
+.btn-grey:hover, .btn-grey:focus, .btn-grey:active {
+  background: #f8f9fa;
+  border-color: #f8f9fa;
+  color: #f8f9fa !important;
+  box-shadow: none !important;
+}
+.btn-black {
+  background-color: #f8f9fa;
+  color: #f8f9fa;
+  border-radius: 35px;
+}
+.btn-black:hover, .btn-black:focus, .btn-black:active {
+  background: #f8f9fa;
+  border-color: #e9ecef;
+  color: #f8f9fa;
+  box-shadow: none !important;
 }
 
 /*# sourceMappingURL=child-theme.css.map */

@@ -12,8 +12,9 @@
     }
 
     li {
-        padding: 0 1rem;
+        padding: 0 0.5rem;
         margin: 0;
+        text-wrap:nowrap;
     }
 
     // Style for anchor tags within the navigation bar
@@ -49,6 +50,112 @@
     }
 }
 
+// Search
+#main-nav {
+    .site-header--wrapper {
+        @include media-breakpoint-down(md) {
+            //position: relative;
+        }
+    }
+    .searchform {
+        &.visible-sm {
+            display: none;
+            @include media-breakpoint-down(md) {
+                display: block;
+                position: absolute;
+                right: 85px;
+                top: 50%;
+                transform: translateY(-12px);
+            }
+        }
+
+        &.hidden-sm {
+             @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+    }
+    .search-box{
+      width: fit-content;
+      height: fit-content;
+      position: relative;
+      margin-right: rem(0);
+      @include media-breakpoint-down(xs) {
+        margin-right: rem(0);
+      }
+    }
+    .input-search{
+      height: rem(48);
+      width: rem(24);
+      border-style: none;
+      padding: 0px;
+      font-size: rem(16);
+      letter-spacing: 0.332px;
+      line-height: rem(32);
+      outline: none;
+      border-radius: 0px;
+      transition: all .5s ease-in-out;
+      background-color: transparent;
+      padding-right: rem(36);
+      padding-left: rem(28);
+      border-color: trnasparent;
+      font-family: 'Montserrat';
+      color:$primary;
+
+      &::placeholder{
+          color:white;
+          font-size: rem(16);
+          font-family: 'Monserrat';
+          line-height: rem(32);
+        }
+    }
+    .btn-search{
+        img{
+            width: 18px;
+            height: 18px;
+        }
+      width: rem(34);
+      height: rem(48);
+      cursor: pointer;
+      position: absolute;
+      right: 0px;
+      color:white ;
+      background-color:transparent;
+      padding-left: 10px;
+      pointer-events: painted; 
+      border: 0 !important;
+      padding: 0 !important;
+      padding-right: 16px !important; 
+    }
+    .btn-search:focus ~ .input-search, .btn-search:hover ~ .input-search {
+      width: rem(284);
+      border-radius: 0px;
+      background-color: transparent;
+      border:1px solid white;
+      border-radius: 22px;
+      transition: all 500ms linear;
+      @include media-breakpoint-down(lg) {
+        width: rem(220);
+      }
+      @include media-breakpoint-down(xs) {
+        width: rem(220);
+      }
+    }
+    .input-search:focus, .input-search:hover{
+      width: rem(284);
+      border-radius: 22px;
+      background-color: transparent;
+      border:1px solid white;
+      transition: all 500ms linear;
+      @include media-breakpoint-down(lg) {
+        width: rem(220);
+      }
+      @include media-breakpoint-down(xs) {
+        width: rem(220);
+      }
+    }
+}
+
 // Styling for the navbar when scrolled
 .navbar-scrolled {
     background-color: $primary;
@@ -63,8 +170,6 @@
     // Customization for dark navbar
     // (Add your customizations here)
 }
-
-
 
 
 // Scroll animations

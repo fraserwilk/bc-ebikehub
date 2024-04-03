@@ -36,6 +36,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
+
+		 <!-- Insert the search form here -->
+<!-- 		
+			<form role="search" method="get" class="searchform group hidden-sm" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<div class="search-box">
+					<button type="button" class="btn-search">
+						<img src="https://buildingcommunities.ebikehub.com.au/wp-content/themes/dist/images/icons/search-icon.svg   ">  
+					</button>
+					
+					<input type="text" class="input-search" placeholder="I'm looking for?" value="" name="s" title="Search for:">
+				</div>
+				
+			</form> -->
+
+
 		<!-- The WordPress Menu goes here -->
 		<?php
 		wp_nav_menu(
