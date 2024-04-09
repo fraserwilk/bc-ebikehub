@@ -18,7 +18,7 @@
     }
 
     // Style for anchor tags within the navigation bar
-    a {
+    a:not(btn) {
         color: $light;
         position: relative;
         transition: all .3s ease;
@@ -168,7 +168,7 @@
 // Customize the appearance of the navbar
 .navbar-dark {
     // Customization for dark navbar
-    // (Add your customizations here)
+    // (Add  customizations here)
 }
 
 

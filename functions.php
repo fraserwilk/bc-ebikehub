@@ -103,6 +103,7 @@ function ebikehub_register_acf_blocks() {
      */
     register_block_type( __DIR__ . '/blocks/about' );
 	register_block_type( __DIR__ . '/blocks/news' );
+	register_block_type( __DIR__ . '/blocks/accordion' );
 }
 // Here we call our goodfleets_register_acf_block() function on init.
 add_action( 'init', 'ebikehub_register_acf_blocks' );

@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-@import "assets/bootstrap5/bootstrap";                             // <------- Loads Bootstrap5
-@import "assets/understrap/theme/understrap";                   // <------- Loads the Understrap defaults. Just a few classes to incorporate BS in WP
+@import "assets/bootstrap5/bootstrap";              // <------- Loads Bootstrap5
+@import "assets/understrap/theme/understrap";       // <------- Loads the Understrap defaults. Just a few classes to incorporate BS in WP
 
 // Optional files - If you don´t use the corresponding scripts/fonts comment em out
-// @import "assets/fontawesome/font-awesome";                           // <------- Font Awesome Icon font
-@import "assets/underscores";                            // <------- Underscores media styles
+@import "assets/fontawesome/font-awesome";                           // <------- Font Awesome Icon font
+@import "assets/underscores";                       // <------- Underscores media styles
 
 // Any additional imported files //
 

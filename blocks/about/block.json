@@ -1,7 +1,7 @@
 {
     "name": "acf/about",
     "title": "About",
-    "description": "A custom about block that uses ACF fields.",
+    "description": "A custom About block that uses ACF fields.",
     "style": [ "file:./about.css" ],
     "category": "formatting",
     "icon": "admin-comments",

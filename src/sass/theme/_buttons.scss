@@ -53,20 +53,18 @@
 		background     : $ebike-highlight;
 		border-radius  : 35px;
 		color          : $gray-900;
-		border-color   : $ebike-highlight;
 		display        : inline-flex;
 		align-items    : center;
 		justify-content: center;
 
 		@include hover-focus-active {
 			background  : $ebike-yellow;
-			border-color: $primary;
 			box-shadow  : none;
+			text-decoration: none;
 		}
 
 		&:hover {
 			background  : $ebike-yellow;
-			border-color: $primary;
 		}
 
 	}

@@ -1,0 +1,16 @@
+{
+    "name": "acf/accordion",
+    "title": "Accordion",
+    "description": "A custom Accordion block that uses ACF fields.",
+    "style": [ "file:./accordion.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["accordion"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "accordion.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}
