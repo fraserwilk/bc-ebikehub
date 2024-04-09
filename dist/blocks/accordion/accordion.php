@@ -13,7 +13,7 @@ while ( have_rows( 'folds' ) ) : the_row();
     </h2>
   </div>
 
-  <div id="collapse-<?php echo get_row_index(); ?>" class="accordion-collapse collapse show" aria-labelledby="heading-<?php echo get_row_index(); ?>"  data-bs-parent="#accordionFaq">
+  <div id="collapse-<?php echo get_row_index(); ?>" class="accordion-collapse collapse" aria-labelledby="heading-<?php echo get_row_index(); ?>"  data-bs-parent="#accordionFaq">
     <div class="accordion-body">
       <?php echo $fold_content; ?>
     </div>
