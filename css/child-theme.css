@@ -14191,6 +14191,16 @@ a:hover {
   padding: 0.5rem;
 }
 
+.wp-block-group {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all ease 1s;
+}
+.wp-block-group.visible {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
