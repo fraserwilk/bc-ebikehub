@@ -40,9 +40,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="content">
 					<h4>About the site</h4>
 					<ul>
-						<li><a href="https://buildingcommunities.ebikehub.com.au/terms-and-conditions-of-use/" target="_blank">Terms</a></li>
-						<li><a href="https://buildingcommunities.ebikehub.com.au/privacy-policy/" target="_blank">Privacy Policy</a></li>
-						<li><a href="https://buildingcommunities.ebikehub.com.au/faqs/" target="_blank">FAQs</a></li>
+						<li><a href="https://buildingcommunities.ebikehub.com.au/terms-and-conditions-of-use/">Terms</a></li>
+						<li><a href="https://buildingcommunities.ebikehub.com.au/privacy-policy/">Privacy Policy</a></li>
+						<li><a href="https://buildingcommunities.ebikehub.com.au/faqs/">FAQs</a></li>
 					</ul>
 					<div></div>
 					<div></div>
