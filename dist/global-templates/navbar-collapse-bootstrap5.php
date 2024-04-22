@@ -66,7 +66,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 			)
 		);
 		?>
-
+		<div class="pe-5">
+			<button type="button" class="btn btn-yellow"><a href="<?php echo site_url(); ?>" class="menu-btn">Apply Now</a></button>
+		</div>
 	</div><!-- .container(-fluid) -->
 
 </nav><!-- #main-nav -->

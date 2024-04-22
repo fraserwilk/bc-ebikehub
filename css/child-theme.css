@@ -14092,6 +14092,10 @@ a.skip-link:not(:focus):not(:focus-within) {
   display: block;
 }
 
+.bg-olive {
+  background: #DFE2D7;
+}
+
 #wrapper-footer {
   background-color: rgb(51, 51, 51);
   color: white;
@@ -14108,6 +14112,40 @@ a.skip-link:not(:focus):not(:focus-within) {
 .wrapper.ebike-single {
   padding-top: 200px;
   background-color: rgb(223, 226, 215);
+}
+
+.testimonial li {
+  color: #FFF;
+  background-color: #333333 !important;
+  padding: 20px !important;
+}
+.testimonial li .wp-block-latest-posts__post-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #FFF !important;
+}
+.testimonial li .wp-block-latest-posts__post-full-content {
+  font-style: italic;
+}
+
+/* For Deed of Waiver form */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* First column: 1/4, second: 3/4 of the width */
+  gap: 0px; /* Gap between grid items */
+}
+
+/* Just for styling purposes */
+.grid-item {
+  background-color: #f0f0f0 !important;
+  padding: 8px !important;
+  border: 1px solid #000 !important;
+  font-weight: 700 !important;
+}
+
+.grid-item.full-width {
+  grid-column: span 2; /* Span the item across two columns */
 }
 
 body.admin-bar .fixed-top {
@@ -14614,14 +14652,14 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
 #main-nav.navbar li {
   padding: 0 0.5rem;
   margin: 0;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
-#main-nav.navbar a:not(btn) {
+#main-nav.navbar a:not(.menu-btn) {
   color: #f8f9fa;
   position: relative;
   transition: all 0.3s ease;
 }
-#main-nav.navbar a:not(btn):after {
+#main-nav.navbar a:not(.menu-btn):after {
   position: absolute;
   content: "";
   left: 0;
@@ -14631,8 +14669,12 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   background: rgb(247, 199, 0);
   transition: all 0.3s linear;
 }
-#main-nav.navbar a:not(btn):hover:after {
+#main-nav.navbar a:not(.menu-btn):hover:after {
   width: 100%;
+}
+#main-nav.navbar .menu-btn {
+  color: #f8f9fa;
+  padding: 0.2rem 0.5rem;
 }
 #main-nav.navbar a.active,
 #main-nav.navbar a[aria-current=page] {
@@ -15025,7 +15067,7 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
 .btn-yellow {
   background: rgb(247, 199, 0);
   border-radius: 35px;
-  color: #212529;
+  color: #fff;
   display: inline-flex;
   align-items: center;
   justify-content: center;

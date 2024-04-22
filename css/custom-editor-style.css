@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.bg-olive {
+  background: #DFE2D7;
+}
+
 #wrapper-footer {
   background-color: rgb(51, 51, 51);
   color: white;
@@ -15,6 +19,40 @@
 .wrapper.ebike-single {
   padding-top: 200px;
   background-color: rgb(223, 226, 215);
+}
+
+.testimonial li {
+  color: #FFF;
+  background-color: #333333 !important;
+  padding: 20px !important;
+}
+.testimonial li .wp-block-latest-posts__post-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #FFF !important;
+}
+.testimonial li .wp-block-latest-posts__post-full-content {
+  font-style: italic;
+}
+
+/* For Deed of Waiver form */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* First column: 1/4, second: 3/4 of the width */
+  gap: 0px; /* Gap between grid items */
+}
+
+/* Just for styling purposes */
+.grid-item {
+  background-color: #f0f0f0 !important;
+  padding: 8px !important;
+  border: 1px solid #000 !important;
+  font-weight: 700 !important;
+}
+
+.grid-item.full-width {
+  grid-column: span 2; /* Span the item across two columns */
 }
 
 *,
