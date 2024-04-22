@@ -14163,13 +14163,15 @@ a:hover {
 }
 
 .testimonial li {
-  background-color: #FAFAFA;
-  padding: 70px 10px 10px;
+  color: #FFF;
+  background-color: #333333;
+  padding: 20px;
 }
 .testimonial li .wp-block-latest-posts__post-title {
   font-size: 1.2rem;
   font-weight: 500;
   text-decoration: none;
+  color: #FFF;
 }
 .testimonial li .wp-block-latest-posts__post-full-content {
   font-style: italic;
